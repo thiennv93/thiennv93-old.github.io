@@ -2,36 +2,70 @@
 layout: default
 ---
 {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
-<div class="post-container">
-  <a class="post-link" href="{{ page.url | relative_url }}">
-    <h2 class="post-title">{{ page.title | escape }}</h2>
-  </a>
-  <div class="post-meta">
-    <ul class="post-categories">
-      {%- for tag in page.categories -%}
-      <li>{{ tag }}</li>
-      {%- endfor -%}
-    </ul>
-    <div class="post-date"><i class="icon-calendar"></i>{{ page.date | date: date_format }}</div>
+
+<article class="blog-post px-3 py-5 p-md-5">
+  <div class="container single-col-max-width">
+    <header class="blog-post-header">
+      <h2 class="title mb-2">{{ page.title | escape }}</h2>
+      <div class="meta mb-3"><span class="date">Published {{ page.date | date: date_format }}</span><span
+          class="time">{{ post.time_read }} min read</span><span class="comment"><a href="#"></a></span></div>
+    </header>
+
+    <div class="blog-post-body">
+      <figure class="blog-banner">
+        <a></a><img class="img-fluid" src="{{ page.thumb_card | relative_url }}" alt="image"></a>
+      </figure>
+      {{ content }}
+
+    </div>
+
+    <nav class="blog-nav nav nav-justified my-5">
+      <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i
+          class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+      <a class="nav-link-next nav-item nav-link rounded-right" href="blog-list.html">Next<i
+          class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+    </nav>
+
+    <div class="blog-comments-section">
+      <div id="disqus_thread"></div>
+      <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+         *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+         *  PLATFORM OR CMS.
+         *  
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+         *  https://disqus.com/admin/universalcode/#configuration-variables
+         */
+        /*
+        var disqus_config = function () {
+            // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = PAGE_URL;  
+            
+            // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            this.page.identifier = PAGE_IDENTIFIER; 
+        };
+        */
+
+        (function () {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+          var d = document, s = d.createElement('script');
+
+          // IMPORTANT: Replace 3wmthemes with your forum shortname!
+          s.src = 'https://3wmthemes.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+          comments powered by Disqus.
+        </a>
+      </noscript>
+    </div>
+    <!--//blog-comments-section-->
+
   </div>
-  <div class="post">
-    {{ content }}
-  </div>
-  {%- if site.plainwhite.disqus_shortname -%}
-  <div id="disqus_thread" style="margin-top:25px"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = '{{ page.url | absolute_url }}';
-      this.page.identifier = '{{ page.url | absolute_url }}';
-    };
-    (function () {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://{{ site.plainwhite.disqus_shortname }}.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
-      powered by Disqus.</a></noscript>
-</div>
-{%- endif -%}
+  <!--//container-->
+</article>
