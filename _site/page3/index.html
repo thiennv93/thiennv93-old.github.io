@@ -136,114 +136,76 @@
 	
 	<div class="main-wrapper">
 		
-		<article class="blog-post px-3 py-5 p-md-5">
-  <div class="container single-col-max-width">
-    <header class="blog-post-header">
-      <h2 class="title mb-2">Integrating razorpay into your webapp</h2>
-      <div class="meta mb-3"><span class="date">Published Mar 23, 2019</span><span
-          class="time"> min read</span><span class="comment"><a href="#"></a></span></div>
-    </header>
-
-    <div class="blog-post-body">
-      <figure class="blog-banner">
-        <a></a><img class="img-fluid" src="/assets/images/blog/blog-post-thumb-card-1.jpg" alt="image"></a>
-      </figure>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Razorpay</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">razorpay</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">rzp</span> <span class="o">=</span> <span class="nx">Razorpay</span><span class="p">({</span>
-	<span class="na">key_id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">KEY_ID</span><span class="dl">'</span><span class="p">,</span>
-	<span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">name</span><span class="dl">'</span>
-<span class="p">});</span>
-
-<span class="c1">// capture request</span>
-<span class="nx">rzp</span><span class="p">.</span><span class="nx">capture</span><span class="p">(</span><span class="nx">payment_id</span><span class="p">,</span> <span class="nx">cost</span><span class="p">)</span>
-	<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
-	<span class="p">})</span>
-</code></pre></div></div>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
-
-
-
+		<section class="cta-section theme-bg-light py-5">
+    <div class="container text-center">
+        <h2 class="heading">A Blog About Software Development And Life</h2>
+        <div class="intro">Welcome to my blog. Subscribe and get my latest blog post in your inbox.</div>
+        <form class="signup-form form-inline justify-content-center pt-3">
+            <div class="form-group">
+                <label class="sr-only" for="semail">Your email</label>
+                <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail"
+                    placeholder="Enter email">
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
     </div>
+    <!--//container-->
+</section><section class="blog-list px-3 py-5 p-md-5">
+    <div class="container">
+        <div class="row"><div class="col-md-4 mb-3">
+                <div class="card blog-post-card">
+                    <img class="card-img-top" src="" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title"><a class="theme-link"
+                                href="/javascript/nodejs/2019/03/23/welcome-to-jekyllknsnks-(3rd-copy).html">Integrating razorpay into your webassadaddadapp</a></h5>
+                        <p class="card-text"><p>Lorem ipsum dolor sadadasdadadait amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
 
-    <nav class="blog-nav nav nav-justified my-5">
-      <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i
-          class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-      <a class="nav-link-next nav-item nav-link rounded-right" href="blog-list.html">Next<i
-          class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-    </nav>
+</p>
+                        <p class="mb-0"><a class="more-link" href="/javascript/nodejs/2019/03/23/welcome-to-jekyllknsnks-(3rd-copy).html">Read more &rarr;</a>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Published Mar 23, 2019</small>
+                    </div>
+                </div>
+                <!--//card-->
+            </div>
+            <!--//col--><div class="col-md-4 mb-3">
+                <div class="card blog-post-card">
+                    <img class="card-img-top" src="assets/images/blog/blog-post-thumb-card-1.jpg" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title"><a class="theme-link"
+                                href="/javascript/nodejs/2019/03/23/welcome-to-jekyll.html">Integrating razorpay into your webapp</a></h5>
+                        <p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
 
-    <div class="blog-comments-section">
-      <div id="disqus_thread"></div>
-      <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-         *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-         *  PLATFORM OR CMS.
-         *  
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-         *  https://disqus.com/admin/universalcode/#configuration-variables
-         */
-        /*
-        var disqus_config = function () {
-            // Replace PAGE_URL with your page's canonical URL variable
-            this.page.url = PAGE_URL;  
+</p>
+                        <p class="mb-0"><a class="more-link" href="/javascript/nodejs/2019/03/23/welcome-to-jekyll.html">Read more &rarr;</a>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Published Mar 23, 2019</small>
+                    </div>
+                </div>
+                <!--//card-->
+            </div>
+            <!--//col--></div>
+        <!--//row-->
+
+        <!-- Pagination links -->
+        
+        <nav class="blog-nav nav nav-justified my-5">
             
-            // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            this.page.identifier = PAGE_IDENTIFIER; 
-        };
-        */
+            <a href="/page2" class="previous nav-link-prev nav-item nav-link">
+                       Previous<i
+                       class="arrow-prev fas fa-long-arrow-alt-left"></i>
+            </a>
+            
+            
+        </nav>
+        
 
-        (function () {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-          var d = document, s = d.createElement('script');
-
-          // IMPORTANT: Replace 3wmthemes with your forum shortname!
-          s.src = 'https://3wmthemes.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>
-        Please enable JavaScript to view the
-        <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-          comments powered by Disqus.
-        </a>
-      </noscript>
     </div>
-    <!--//blog-comments-section-->
-
-  </div>
-  <!--//container-->
-</article>
-<!-- Pagination links -->
-<div class="pagination">
-  
-    <span class="previous">Previous</span>
-  
-  <span class="page_number ">
-    Page:  of 
-  </span>
-  
-    <span class="next ">Next</span>
-  
-</div>
-<!-- Pagination links -->
-<div class="pagination">
-  
-    <span class="previous">Previous</span>
-  
-  <span class="page_number ">
-    Page:  of 
-  </span>
-  
-    <span class="next ">Next</span>
-  
-</div>	
+</section>	
 		
 		
 

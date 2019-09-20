@@ -21,11 +21,11 @@ layout: default
   </div>
   <!--//container-->
 </section>
-{%- if site.posts.size > 0 -%}
+{%- if paginator.posts.size > 0 -%}
 <section class="blog-list px-3 py-5 p-md-5">
   <div class="container">
     <div class="row">
-      {%- for post in site.posts -%}
+      {%- for post in paginator.posts -%}
       {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
       <div class="col-md-4 mb-3">
         <div class="card blog-post-card">

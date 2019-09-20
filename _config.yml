@@ -50,7 +50,9 @@ plainwhite:
 
 # Build settings
 theme: plainwhite
+paginate: 2
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
 #  - jekyll-feed
